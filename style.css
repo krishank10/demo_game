@@ -1,0 +1,158 @@
+* {
+		font-family: helvetica, sans-serif;
+		font-weight: bold;
+}
+/* Layout */
+html {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f5eded; 
+}
+
+h1,p{
+  text-align: center;
+  color: #555;
+}
+h3{
+  margin: 20px 0 0;
+  padding: 5px;
+  background: #fafafa;
+  font-size: 1rem;
+  color: #999;
+}
+
+	#transition-examples {
+		max-width: 600px;
+    width: 90vw;
+		margin: 0px auto;
+	}
+ 	.hamster-track {
+    position: relative;
+		margin:  0;
+		width: 100%;
+		height: 70px;
+		padding: 0;
+		background: #EBEBEB;
+		border-radius: 4px;
+    overflow: hidden;
+	}
+	 .foo {
+     display: inline-block;
+     width: 70px;
+     height: 70px;
+	   background: url(http://www.svgrepo.com/show/3032/hamster-ball.svg) no-repeat;
+	   border-radius: 100%;
+	}
+
+/* Transitions */
+
+	.ball1 {	
+		transition: all 1.4s linear;
+	}
+
+	.ball2 {	
+		transition: all 1.4s ease-in;
+	}
+
+	.ball3 {	
+		transition: all 1.4s ease;
+	}
+
+	.ball4 {	
+		transition: all 1.4s ease-in-out;
+	}
+
+	.ball5 {	
+		transition: all 1.4s ease-out;
+	}
+
+	.ball6 {	
+		transition: all 1.4s cubic-bezier(.2,.8,.8,.2);
+	}
+  .ball7{
+    background: url(http://www.svgrepo.com/show/7891/ufo.svg);
+   transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+  }
+/* Element we are transitioning 
+You can use pseudo-classes or other element states. Here we set a class that will be added to the element using jQuery when clicked */
+	.active {
+		margin-left: 495px;
+    transform: rotate(720deg);
+	}
+.ball7.active{
+  margin-left: 495px;
+  transform: none;
+}
+/* Make em all roll */
+.fire-all {
+  display: block;
+	margin: 50px auto 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+}	
+
+.fire-away {
+  display: block;
+  height: 100%;
+  line-height: 140px;
+	background: #eee url(http://www.svgrepo.com/show/100692/hamster.svg) 0px 10px no-repeat;
+	margin-top: 0px;
+	border-radius: 100%;
+	color: white;
+	text-decoration: none;
+	font-style: italic;
+	transition: all .2s linear;
+}
+.fire-away:hover{
+  background-color: red ;
+}
+
+.fired {
+	transition: all .2s ease-in-out;
+  background-position: 0 20px;
+  background-color: #333;
+}
+
+
+/* General style */
+header{
+  width: 100%;
+  display: block;
+  background: #FFF;
+  height: 40px;
+  margin-bottom: 4%;
+  color: #ccc;
+  font-family: sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 2px 0px 0px rgba(125,121,125,0.3);
+  overflow: hidden;
+}
+header h1, header a{
+  display: inline-block;
+  font-size: .8rem;
+  margin: auto 10px;
+  line-height: 40px;
+
+}
+header h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+header a{
+  text-decoration: none;
+  background-color: #eee;
+  color: #999;
+  padding: 0 20px;
+  transition: all ease-in-out .3s;
+}
+header a:hover{
+  background-color: #93dfec;
+  color: #eee;
+  margin-left: -3px;
+}
